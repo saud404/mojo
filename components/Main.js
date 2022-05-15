@@ -29,22 +29,16 @@ export default function Main() {
           </a>
         </div>
       </div>
-      <div className="container flex flex-col items-center justify-center mx-auto">
-        <img
-          className="object-cover object-center w-3/4 mb-10 border shadow-md g327"
-          alt="Placeholder Image"
-          src="./images/placeholder.png"
-        ></img>
-      </div>
+
       <h2 className="pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-200 lg:text-7xl md:text-6xl">
         Clean and tidy code.
       </h2>
       <br></br>
-      <p className="mx-auto text-xl text-center text-gray-300 font-normal leading-relaxed fs521 lg:w-2/3">
+      <p className="mx-auto text-xl font-normal leading-relaxed text-center text-gray-300 fs521 lg:w-2/3">
         Here is our collection of free to use templates made with Next.js &
         styled with Tailwind CSS.
       </p>
-      <div className="pt-12 pb-24 max-w-4xl mx-auto fsac4 md:px-1 px-3">
+      <div className="max-w-4xl px-3 pt-12 pb-24 mx-auto fsac4 md:px-1">
         <div class="ktq4">
           <img className="w-10" src="https://nine4.app/favicon.png"></img>
           <h3 class="pt-3 font-semibold text-lg text-white">
@@ -90,7 +84,7 @@ export default function Main() {
           </p>
         </div>
       </div>
-      <div className="pt-32 pb-32 max-w-6xl mx-auto fsac4 md:px-1 px-3">
+      <div className="max-w-6xl px-3 pt-32 pb-32 mx-auto fsac4 md:px-1">
         <div class="ktq4">
           <img src="https://nine4.app/images/nine4-3.png"></img>
           <h3 class="pt-3 font-semibold text-lg text-white">

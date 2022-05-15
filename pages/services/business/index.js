@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
+import Header from "../../../components/Header";
+import Services from "../../../components/services";
+import Footer from "../../../components/Footer";
 import { NextSeo } from "next-seo";
 
-export default function Home() {
+export default function Business() {
   return (
     <div className="text-black bg-black">
       <NextSeo
@@ -17,10 +17,10 @@ export default function Home() {
       />
       <Head>
         <title>M-Open73 Consultancy</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="../../favicon.png" />
       </Head>
       <Header />
-      <Main />
+      <Services />
       <Footer />
     </div>
   );

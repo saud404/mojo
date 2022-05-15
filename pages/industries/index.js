@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Industry from "../../components/Industries";
+import Footer from "../../components/Footer";
 import { NextSeo } from "next-seo";
 
-export default function Home() {
+export default function Industries() {
   return (
     <div className="text-black bg-black">
       <NextSeo
@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      <Main />
+      <Industry />
       <Footer />
     </div>
   );

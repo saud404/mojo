@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from 'next/link';
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
@@ -9,13 +9,12 @@ export default function Header() {
     <header class="fixed top-0 w-full clearNav z-50">
       <div class="max-w-5xl mx-auto flex flex-wrap p-5 flex-col md:flex-row">
         <div className="flex flex-row items-center justify-between p-3 md:p-1">
-          <a
-            href="/"
-            class="flex text-3xl text-white font-medium mb-4 md:mb-0"
-          >NINE4
+         
+          <a  href="/" class="flex text-3xl text-white font-medium mb-4 md:mb-0"
+          > <img src="./images/logo.jpg" alt="alternatetext" class="w-75 h-20" /> 
           </a>
           <button
-            className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto"
+            className="content-end px-3 py-1 pb-4 ml-auto leading-none text-white outline-none cursor-pointer md:hidden focus:outline-none"
             type="button"
             aria-label="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
@@ -45,18 +44,18 @@ export default function Header() {
           }
         >
           <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap items-center md:text-base text-1xl md:justify-center justify-items-start">
+            <Link  href="/about">
             <a class="mr-11 pr-2 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Features
+              About
             </a>
+            </Link>
             <div className="relative">
               <button
                 type="button"
-                className="
-                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
-                  "
+                className="inline-flex items-center text-base font-medium text-gray-300 rounded-md group focus:outline-none'"
                 onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                <span className="tr04">Templates</span>
+                <span className="tr04">Services</span>
                 <svg
                   className={
                     flyer === true
@@ -83,60 +82,67 @@ export default function Header() {
                     : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                 }
               >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                  <div className="relative grid gap-6 bg-black px-2 py-6 sm:gap-8 ">
-                    <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                  <div className="relative grid gap-6 px-2 py-6 bg-black sm:gap-8 ">
+                   <Link  href="/services/business/">
+                    <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800 tr04"
                     >
+                      
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #1
+                          Business
                         </p>
                         <p className="mt-1 text-sm text-gray-500">
-                          First Template
+                          Services
                         </p>
                       </div>
                     </a>
+                     </Link>
+                   <Link href="/services/itservices/">
                     <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #2
+                         Technology
                         </p>
                         <p className="mt-1 text-sm text-gray-500">
-                          Second Template
+                         Services
                         </p>
                       </div>
                     </a>
-                    <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    </Link>
+                    <Link href="/services/legal">
+                    <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #3
+                         Legal
                         </p>
                         <p className="mt-1 text-sm text-gray-500">
-                          Third Template
+                         Services
                         </p>
                       </div>
                     </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
+            <Link href="/industries/">
             <a class="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Pricing
+              Industries
             </a>
+            </Link>
+            <Link href="/contact">
             <a class="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Careers
+              Contact Us
             </a>
+            </Link>
           </div>
+          <Link href="https://twitter.com/">
           <a
-            href="https://twitter.com/"
+            
             rel="noopener noreferrer"
             target="_blank"
             className="invisible md:visible"
@@ -156,12 +162,13 @@ export default function Header() {
               ></path>
             </svg>
           </a>
+          </Link>
+          <Link href="https://linkedin.com/">
           <a
             data-v-54e46119=""
-            href="https://github.com/"
             rel="noopener noreferrer"
             target="_blank"
-            className="pl-7 invisible md:visible"
+            className="invisible pl-7 md:visible"
           >
             <svg
               data-v-54e46119=""
@@ -170,8 +177,8 @@ export default function Header() {
               viewBox="0 0 25 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              title="GitHub logo"
-              class="github-link--logo"
+              title="LinkedIn logo"
+              class="linkedin-link--logo"
             >
               <path
                 data-v-54e46119=""
@@ -182,6 +189,7 @@ export default function Header() {
               ></path>
             </svg>
           </a>
+          </Link>
         </div>
       </div>
     </header>
